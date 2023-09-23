@@ -1,0 +1,7 @@
+studentName~,ID~,age~,avgscore~,courseName~,score~,courseID~,teacherName~,teacherComment~,
+Student 3,122,33001,91.6667,12,95,301,Teacher A,3a,23,91,302,Teacher B,3b,3,89,303,Teacher C,3c,
+Student 2,121,22001,84.9,0,78,201,Teacher A,2a,3,92,202,Teacher B,2b,10,87,203,Teacher C,2c,
+Student 1,120,11001,87.6667,3,90,101,Teacher A,1a,10,85,102,Teacher B,1b,23,88,103,Teacher C,1c,
+Student 3,22,3001,91.6667,12,95,301,Teacher A,3a,23,91,302,Teacher B,3b,3,89,303,Teacher C,3c,
+Student 2,21,2001,84.9,0,78,201,Teacher A,2a,3,92,202,Teacher B,2b,10,87,203,Teacher C,2c,
+Student 1,20,1001,87.6667,3,90,101,Teacher A,1a,10,85,102,Teacher B,1b,23,88,103,Teacher C,1c,
