@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="admin.cpp" />
     <ClCompile Include="head.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StudentManager.cpp" />

@@ -3,7 +3,24 @@
 
 #pragma once
 #include"StudentManager.h"
-class admin :public StudentManager
+class Admin :public StudentManager
 {
+public:
+	Admin(int _pwd, string _userName) :pwd(_pwd), userName(_userName) {}
+
+	void initMenu()override;		//显示菜单
+
+	void showAllInfo();				//查看所有学生信息
+
+	void addStuInfo();				//添加学生信息
+
+private:
+
+	int pwd;			//管理员密码
+	string userName;	//管理员用户名
+
+	void initData();	//初始化数据
+
+	void showMenu();
 };
 

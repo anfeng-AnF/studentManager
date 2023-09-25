@@ -31,6 +31,9 @@ StudentManager::StudentManager()
 {
 }
 
+void StudentManager::initMenu()
+{
+}
 
 bool StudentManager::insertStudent(string _name, int _age, int _ID, int length,CourseInfo* arr)
 {
@@ -195,7 +198,7 @@ void StudentManager::getDataFile()
 	string strInfo;
 	getline(ifs, strInfo);//丢弃第一行用于直接编辑文件的提示语
 
-	unsigned int start = 0, pos = 0;
+	size_t start = 0, pos = 0;
 	string stuName, teacherName, teacherComment;
 	int ID{}, age{}, courseName{}, courseID{};
 	float score{}, avgScore{};

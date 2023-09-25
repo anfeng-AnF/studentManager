@@ -80,6 +80,7 @@ public:
 	//输出学生信息   测试用例
 	void showInfo();
 
+protected:
 	//增加信息操作
 	bool insertStudent(string _name,int _age,int _ID,int length,CourseInfo*arr);		//插入1个学生信息
 	void insertNStudent(int n,student*arr);												//插入n个学生信息
@@ -100,14 +101,16 @@ public:
 
 	iter getEnd();							//获取末尾迭代器
 
-private:
+	void culaAvgScore(iter target);		//计算均绩
+
 	StudentManager();
 	StudentManager(const StudentManager&) = delete;
 	StudentManager operator=(const StudentManager&) = delete;
 
-	
+public:
+	//虚函数：
 
-	void culaAvgScore(iter target);		//计算均绩
+	virtual void initMenu();	//初始化菜单
 };
 
 template<typename listType>
