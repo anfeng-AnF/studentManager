@@ -26,6 +26,7 @@ struct CourseInfo
 		os << "course ID:" << obj.courseID << endl;
 		os << "teacherName:" << obj.teacherName << endl;
 		os << "teacherComment:" << obj.teacherComment << endl;
+		cout << "-----------------------------------------" << endl;
 		return os;
 	}
 };

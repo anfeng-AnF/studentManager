@@ -210,16 +210,16 @@ void StudentManager::getDataFile()
 
 		//先提取每个学生的基础信息
 		pos = strInfo.find(",", start);
-		stuName = strInfo.substr(start, pos);//获取学生姓名 ...
+		stuName = strInfo.substr(start, pos - start);//获取学生姓名 ...
 		start = pos + 1;
 		pos = strInfo.find(",", start);
-		ID = stoi(strInfo.substr(start, pos));
+		ID = stoi(strInfo.substr(start, pos - start));
 		start = pos + 1;
 		pos = strInfo.find(",", start);
-		age = stoi(strInfo.substr(start, pos));
+		age = stoi(strInfo.substr(start, pos - start));
 		start = pos + 1;
 		pos = strInfo.find(",", start);
-		avgScore = stof(strInfo.substr(start, pos));
+		avgScore = stof(strInfo.substr(start, pos - start));
 		start = pos + 1;
 
 		if(!this->insertStudent(stuName, ID, age, 0, nullptr))continue;
@@ -228,27 +228,27 @@ void StudentManager::getDataFile()
 		while (start < strInfo.size())
 		{
 			pos = strInfo.find(",", start);
-			courseName = stoi(strInfo.substr(start, pos));
+			courseName = stoi(strInfo.substr(start, pos - start));
 			start = pos + 1;
 
 			pos = strInfo.find(",", start);
-			score = stof(strInfo.substr(start, pos));
+			score = stof(strInfo.substr(start, pos - start));
 			start = pos + 1;
 
 			pos = strInfo.find(",", start);
-			courseID = stoi(strInfo.substr(start, pos));
+			courseID = stoi(strInfo.substr(start, pos - start));
 			start = pos + 1;
 
 			pos = strInfo.find(",", start);
-			teacherName = strInfo.substr(start, pos);
+			teacherName = strInfo.substr(start, pos-start);
 			start = pos + 1;
 
 			pos = strInfo.find(",", start);
-			teacherComment = strInfo.substr(start, pos);
+			teacherComment = strInfo.substr(start, pos - start);
 			start = pos + 1;
+			CourseInfo temp = { intToCourse(courseName),score,courseID,teacherName,teacherComment };
+			this->insertCouresinfo(stu, 1, &temp);
 		}
-		CourseInfo temp = { intToCourse(courseName),score,courseID,teacherName,teacherComment };
-		this->insertCouresinfo(stu, 1, &temp);
 	}
 
 	ifs.close();
