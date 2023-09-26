@@ -26,7 +26,7 @@ struct CourseInfo
 		os << "course ID:" << obj.courseID << endl;
 		os << "teacherName:" << obj.teacherName << endl;
 		os << "teacherComment:" << obj.teacherComment << endl;
-		cout << "-----------------------------------------" << endl;
+		//cout << "-----------------------------------------" << endl;
 		return os;
 	}
 };
@@ -63,12 +63,12 @@ public:
 
 //学生管理类
 class StudentManager {
+
+protected:
 	using student		=	StudentInfo<CourseInfo>;
 	using List			=	list<student>;
 	using iter			=	list<student>::iterator;
 	using iterCoures	=	list<CourseInfo>::iterator;
-
-protected:
 
 	List stuList;			//存储一个list链表
 

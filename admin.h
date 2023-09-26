@@ -14,6 +14,12 @@ public:
 
 	void addStuInfo();				//添加学生信息
 
+	void deleteInfo();				//移除学生信息
+
+	void saveStuInfo();				//保存学生信息
+
+	void changeStuCInfo();			//编辑学生信息
+
 private:
 
 	int pwd;			//管理员密码
@@ -21,6 +27,8 @@ private:
 
 	void initData();	//初始化数据
 
-	void showMenu();
+	void showMenu();	//显示菜单界面
+
+	void insereCourseInfo(iter it);//插入学生信息
 };
 

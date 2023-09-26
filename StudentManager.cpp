@@ -13,10 +13,12 @@ StudentManager& StudentManager::getObject()
 void StudentManager::showInfo()
 {
 	for (auto it : this->stuList) {
+		cout << "\n==========================================================" << endl;
 		cout << "name:" << it.name << endl;
 		cout << "ID:" << it.ID << endl;
 		cout << "age:" << it.age << endl;
 		cout << "average socre:" << it.avgScore << endl;
+		cout << "\n学生" << it.name << "所有课程信息如下：" << endl;
 		it.showList();
 	}
 }
@@ -123,6 +125,7 @@ bool StudentManager::deleteStuInfo(int ID, string name)
 	iter target = this->find(ID);
 	if (target != this->stuList.end() && target->name == name) {
 		this->stuList.erase(target);
+		this->hashMapSumScore.erase(ID);
 		return true;
 	}
 	return false;
