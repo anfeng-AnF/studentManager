@@ -102,7 +102,6 @@ protected:
 
 	iter getEnd();							//获取末尾迭代器
 
-	void culaAvgScore(iter target);		//计算均绩
 
 	StudentManager();
 	StudentManager(const StudentManager&) = delete;
@@ -111,6 +110,7 @@ protected:
 	void cleanAll();					//清空数据
 
 public:
+	void culaAvgScore(iter target);		//计算均绩
 	//虚函数：
 
 	virtual void initMenu();	//初始化菜单

@@ -21,7 +21,7 @@ void Admin::initMenu() {
             changeStuCInfo();
             break;
         case 5://更新所有学生均绩
-
+            this->renewAvgScore();
             break;
         case 6://保存学生信息
             this->saveStuInfo();
@@ -169,6 +169,14 @@ void Admin::clearAllInfo()
         this->cleanAll();
         cout << "已经清空所有信息" << endl;
     }
+}
+
+void Admin::renewAvgScore()
+{
+    for (auto it : this->hashMapSumScore) {
+        this->culaAvgScore(it.second);
+    }
+    cout << "已经更新了所有学生的均绩" << endl;
 }
 
 void Admin::initData()

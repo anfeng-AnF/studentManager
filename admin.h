@@ -22,6 +22,7 @@ public:
 
 	void clearAllInfo();			//清空所有信息
 
+	void renewAvgScore();			//更新均绩
 private:
 
 	int pwd;			//管理员密码
