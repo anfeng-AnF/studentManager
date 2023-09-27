@@ -27,7 +27,7 @@ void Admin::initMenu() {
             this->saveStuInfo();
             break;
         case 7://清空学生信息 
-
+            this->clearAllInfo();
             break;
         case 8://退出系统
             this->saveStuInfo(); //自动保存
@@ -158,6 +158,17 @@ void Admin::changeStuCInfo()
         return;
     }
     this->insereCourseInfo(it);
+}
+
+void Admin::clearAllInfo()
+{
+    cout << "请再次确认是否清空 输入yes以确认" << endl;
+    string choose;
+    cin >> choose;
+    if (choose == "yes") {
+        this->cleanAll();
+        cout << "已经清空所有信息" << endl;
+    }
 }
 
 void Admin::initData()

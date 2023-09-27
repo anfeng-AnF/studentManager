@@ -108,6 +108,8 @@ protected:
 	StudentManager(const StudentManager&) = delete;
 	StudentManager operator=(const StudentManager&) = delete;
 
+	void cleanAll();					//清空数据
+
 public:
 	//虚函数：
 

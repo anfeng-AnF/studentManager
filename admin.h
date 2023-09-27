@@ -20,6 +20,8 @@ public:
 
 	void changeStuCInfo();			//编辑学生信息
 
+	void clearAllInfo();			//清空所有信息
+
 private:
 
 	int pwd;			//管理员密码

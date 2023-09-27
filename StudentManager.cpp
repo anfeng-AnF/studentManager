@@ -12,6 +12,10 @@ StudentManager& StudentManager::getObject()
 
 void StudentManager::showInfo()
 {
+	if (this->stuList.empty()) {
+		cout << "当前无学生信息" << endl;
+		return;
+	}
 	for (auto it : this->stuList) {
 		cout << "\n==========================================================" << endl;
 		cout << "name:" << it.name << endl;
@@ -31,6 +35,12 @@ iter StudentManager::getEnd()
 
 StudentManager::StudentManager()
 {
+}
+
+void StudentManager::cleanAll()
+{
+	this->hashMapSumScore.clear();
+	this->stuList.clear();
 }
 
 void StudentManager::initMenu()
